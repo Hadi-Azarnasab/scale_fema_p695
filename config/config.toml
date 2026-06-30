@@ -1,0 +1,63 @@
+#  Project Configuration
+
+
+# -------------------- Iran2800v2
+[iran2800]
+seismic_zone = 1        
+soil_type    = "II"     
+importance   = 1.0    
+damping      = 5.0      
+t_max        = 4.0      
+n_points     = 500
+T_f          = 1.0
+
+# -------------------- Iran2800v4
+[iran2800v4]
+T_f               =   1.0     #  first mode (second)
+soil_type       =   'II'    #  'I', 'II', 'III', 'IV'
+hazard_level    =   'h'     #   'h':'high or very high' 'l': 'low or moderate'
+method          =   'excess_energy'
+#'least_distortion', 'min_max', 'min_sum', 'min_variance','weighted', 'importance_weighted', 'excess_energy',  'min_max_spectral', 'conditional', 'log_barrier','target_match','bounded_band','multi_objective'
+
+
+# -------------------- Iran2800v5
+[iran2800v5]
+n_theta         =   12
+Tu              =   1.5     #   first mode (second)
+Tl              =   0.2     #   90% mass contribution
+soil_type       =   'II'    #   'I', 'II', 'III', 'IV', 'V'
+Ss              =   1.0     #    
+S1              =   0.4     #
+method          =   'target_match'
+#'least_distortion', 'min_max', 'min_sum', 'min_variance','weighted', 'importance_weighted', 'excess_energy',  'min_max_spectral', 'conditional', 'log_barrier','target_match','bounded_band','multi_objective'
+
+
+# ---------------------- UBC 1997 
+[ubc97]
+seismic_zone = "4"      
+soil_profile = "SC"                             
+Na           = 1.0      
+Nv           = 1.0      
+damping      = 5.0
+t_max        = 4.0
+n_points     = 500
+T_f          = 1.0
+
+# --------------------- Structure properties
+[structure]
+     # fundamental period
+
+
+# --------------------- Newmark-beta method
+[Newmark]
+gamma       = 0.5
+beta        = 0.16667
+
+# ---------------------
+# Paths (relative to project root)
+[paths]
+records_dir          = "Fema_P695_records_converted"
+response_spectra_dir = "outputs/Spectra/Response"
+design_spectra_dir   = "outputs/Spectra/Design"
+scaled_records_dir   = "outputs/Scaled_records"
+plots_dir            = "outputs/Plots"

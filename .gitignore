@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Ground motion record files (large data)
+#Fema_P695_records/
+#Fema_P695_records_converted/
+
+# Generated outputs - ignore everything inside, keep only the top-level .gitkeep
+outputs/Plots/**
+outputs/Scaled_records/**
+outputs/Spectra/**
+!outputs/Plots/.gitkeep
+!outputs/Scaled_records/.gitkeep
+!outputs/Spectra/.gitkeep
+
+
+# Project snapshot
+collect_project.py
+project_snapshot.txt
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project information
+*.egg-info/
+
+
+# notebooks
+*.ipynb
+
+docs/

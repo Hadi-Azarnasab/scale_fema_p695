@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "record-scaling"
+version = "2.0"
+description = "Earthquake ground motion record scaling"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0",
+    "matplotlib>=3.9",
+    "scipy>=1.13",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
